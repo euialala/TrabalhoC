@@ -1,0 +1,89 @@
+Como forma de avaliar o uso de conceitos vistos em aula, as duplas (trio), devem realizar APIs em C#, utilizando MySQL, para gerenciamento de uma fruteira.
+
+O desenvolvimento deverá ser em dupla. E somente 1 trio.
+
+Requisitos:
+- Modelar um banco de dados para a necessidade abaixo
+- Mostrar na forma de script SQL a estrutura de criação das tabelas, script de popular as tabelas (mínimo de 10 registros em cada tabela)
+- Montar endpoints para:
+
+cadastrar produtos/frutas;
+consultar produtos;
+alterar produtos;
+excluir produtos;
+cadastrar categorias;
+controlar estoque;
+registrar clientes;
+registrar vendas;
+consultar os itens vendidos;
+calcular o valor total de uma venda;
+
+A solução do problema deverá ser disponibilizada no git e informada no dia da apresentação.
+Como método de avaliação, será pego o projeto no git, onde deve conter a documentação para a execução do mesmo.
+Para o SQL, será avaliado individualmente no computador no dia da apresentação.
+
+Data: 21/09/2026
+
+Este projeto será utilizado para o próximo tema de estudo (WinForms) da turma.
+
+
+
+🟢🔴🟠
+
+Objetivos do projeto (em ordem de relevância)
+
+Entregar uma API funcional em C# + MySQL🟠
+
+API rodando com endpoints CRUD de frutas/produtos e categorias.
+
+Conexão com MySQL configurada e funcionando.
+
+Modelar e criar o banco de dados🔴
+
+Desenhar as tabelas necessárias (produtos, categorias, clientes, vendas, itens da venda, estoque).
+
+Entregar script SQL de criação das tabelas (CREATE TABLE, chaves, relacionamentos).
+
+Popular o banco com dados de teste
+
+Script SQL com INSERT para cada tabela.
+
+Mínimo de 10 registros em cada tabela.
+
+Implementar os endpoints pedidos🔴
+
+Cadastrar, consultar, alterar e excluir produtos/frutas.
+
+Cadastrar categorias.
+
+Controlar estoque (atualizar quantidade).
+
+Registrar clientes.
+
+Registrar vendas.
+
+Consultar itens vendidos de uma venda.
+
+Calcular valor total de uma venda.
+
+Documentar e publicar no Git🔴
+
+Repositório no Git com o código completo.
+
+README com passo a passo para rodar (banco, connection string, como subir a API).
+
+Incluir os scripts SQL no repositório.
+
+Preparar para a avaliação individual de SQL🔴
+
+Garantir que você sabe rodar os scripts no MySQL e explicar a estrutura das tabelas.
+
+Testar consultas básicas (SELECT, JOINs entre venda/itens/produtos).
+
+Prazo e organização🔴
+
+Data da entrega/apresentação: 21/09/2026.
+
+Trabalho em dupla (ou trio, só um grupo).
+
+Pensar na reutilização desse projeto para WinForms depois.
