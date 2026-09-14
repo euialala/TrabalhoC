@@ -11,5 +11,7 @@ namespace WebApplication1.Data
         }
 
         public DbSet<Fruta> Fruta { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
     }
 }

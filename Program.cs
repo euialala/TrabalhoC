@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
 
@@ -10,8 +9,6 @@ namespace WebApplication1
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            //Configuração para utilizar banco de dados mysql
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseMySql(
                     builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -21,14 +18,27 @@ namespace WebApplication1
                 )
             );
 
+            // Permitir que o Front-end acesse a API
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("LiberarFront", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // CORS
+            app.UseCors("LiberarFront");
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -38,7 +48,6 @@ namespace WebApplication1
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
